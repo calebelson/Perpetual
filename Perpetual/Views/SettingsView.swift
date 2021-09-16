@@ -60,7 +60,11 @@ struct SettingsView: View {
                     } label: {
                         HStack {
                             Image(uiImage: UIImage(named: currentIcon) ?? UIImage())
-                                .cornerRadius(12)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.gray, lineWidth: 0.25)
+                                )
                             Text("Change icon")
                         }
                         .onAppear {
