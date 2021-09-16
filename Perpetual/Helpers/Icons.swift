@@ -13,10 +13,10 @@ struct IconManager {
     private let application = UIApplication.shared
     
     public enum AppIcon: String, CaseIterable {
+        case defaultIcon
         case whiteBackground
         case blackBackground
         case blackOnWhite
-        case defaultIcon
         
         var presentedName: String {
             switch self {

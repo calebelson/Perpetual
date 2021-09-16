@@ -61,7 +61,7 @@ struct SettingsView: View {
                         HStack {
                             Image(uiImage: UIImage(named: currentIcon) ?? UIImage())
                                 .cornerRadius(12)
-                            Text("Choose icon")
+                            Text("Change icon")
                         }
                         .onAppear {
                             currentIcon = iconManager.getIcon().imageName

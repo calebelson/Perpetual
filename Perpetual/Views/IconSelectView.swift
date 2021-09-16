@@ -18,8 +18,13 @@ struct IconSelectView: View {
                 }) {
                     HStack {
                         Image(uiImage: UIImage(named: icon.imageName) ?? UIImage())
-                            .cornerRadius(12)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.gray, lineWidth: 0.25)
+                            )
                         Text(icon.presentedName)
+                            .foregroundColor(Color.primary)
                     }
                 }
             }

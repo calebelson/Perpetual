@@ -160,14 +160,14 @@
 			isa = PBXGroup;
 			children = (
 				C97D935126F3E4930072A85D /* AboutView.swift */,
+				C97D935826F3E4930072A85D /* AddTodayView.swift */,
+				C97D935526F3E4930072A85D /* HabitDetailView.swift */,
+				C97D935726F3E4930072A85D /* HomeView.swift */,
 				C97D935226F3E4930072A85D /* IconSelectView.swift */,
+				C97D935926F3E4930072A85D /* NewHabitView.swift */,
+				C97D935626F3E4930072A85D /* ProgressView.swift */,
 				C97D935326F3E4930072A85D /* SettingsView.swift */,
 				C97D935426F3E4930072A85D /* TrendView.swift */,
-				C97D935526F3E4930072A85D /* HabitDetailView.swift */,
-				C97D935626F3E4930072A85D /* ProgressView.swift */,
-				C97D935726F3E4930072A85D /* HomeView.swift */,
-				C97D935826F3E4930072A85D /* AddTodayView.swift */,
-				C97D935926F3E4930072A85D /* NewHabitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,9 +175,9 @@
 		C97D935A26F3E4930072A85D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C97D935D26F3E4930072A85D /* Habits.swift */,
 				C97D935B26F3E4930072A85D /* Icons.swift */,
 				C97D935C26F3E4930072A85D /* Ring.swift */,
-				C97D935D26F3E4930072A85D /* Habits.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -503,7 +503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = calebElson.Perpetual;
+				PRODUCT_BUNDLE_IDENTIFIER = calebElson.PerpetualHabits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -535,7 +535,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = calebElson.Perpetual;
+				PRODUCT_BUNDLE_IDENTIFIER = calebElson.PerpetualHabits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
