@@ -28,7 +28,6 @@ struct TrendView: View {
                                 Spacer()
                                 
                                 // TODO: Year indicator
-                                
                                 let rectValues = colorAndHeight(score: Int(score.score))
                                 
                                 Rectangle()
