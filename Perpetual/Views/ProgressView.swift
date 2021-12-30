@@ -42,9 +42,9 @@ struct ProgressView: View {
                                     }
                                 }
                         case 16...85:
-                            Ring(progress: 1.0, thickness: 1.0)
-                                .foregroundColor(colorManager.scoreColor(score))
-                                //.animation(.easeInOut(duration: 1.0))
+                            Ring(progress: score/100, thickness: 1.0)
+                                .foregroundColor(colorManager.scoreColor(score, opacity: score/100))
+                                .animation(.easeInOut(duration: 1.0))
                         default:
                             Circle()
                                 .foregroundColor(colorManager.scoreColor(score))
