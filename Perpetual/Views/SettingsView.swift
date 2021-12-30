@@ -14,7 +14,7 @@ struct SettingsView: View {
     @State var deleteAllAlert = false
     @State var showNewHabit = false
     @State var currentIcon = "AppIconImage"
-    private let iconManager = IconManager()
+    //private let iconManager = IconManager()
     
     var body: some View {
         NavigationView {
@@ -68,7 +68,7 @@ struct SettingsView: View {
                             Text("Change icon")
                         }
                         .onAppear {
-                            currentIcon = iconManager.getIcon().imageName
+                            //currentIcon = iconManager.getIcon().rawValue
                         }
                     }
                 }

@@ -13,6 +13,8 @@ struct HomeView: View {
     @State var addToday: Habit?
     @StateObject var habitsEnvironment = Habits()
     
+    @Environment(\.presentationMode) var presentation
+    
     var body: some View {
         NavigationView {
             List {
@@ -24,9 +26,9 @@ struct HomeView: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.all)
                             if habit.scores.count != 0 {
-                                //                                Divider()
-                                //                                ProgressView(habits: habits, habitID: habit.id, scores: habit.scores)
-                                //                                    .padding(.bottom)
+                                Divider()
+                                ProgressView(habitID: habit.id)
+                                    .padding(.bottom)
                                 
                                 Divider()
                                 TrendView(habitID: habit.id)

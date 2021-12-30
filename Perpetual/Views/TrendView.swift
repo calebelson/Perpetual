@@ -18,6 +18,7 @@ struct TrendView: View {
 
     var body: some View {
         let sortedScores = sortedScores(habitID: habitID)
+        
         VStack {
             ScrollView(.horizontal) {
                 ScrollViewReader { scrollView in

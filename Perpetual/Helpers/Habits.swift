@@ -68,6 +68,8 @@ class Habits: ObservableObject {
     func deleteHabit(element: IndexSet, habitID: UUID) {
         let habit = getHabit(habitID: habitID)
         
+        
+        
         habit.scores.remove(atOffsets: element)
                 
         save()

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 @main
 struct PerpetualApp: App {
     //let persistenceController = PersistenceController.shared
