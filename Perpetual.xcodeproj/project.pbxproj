@@ -27,6 +27,7 @@
 		C97D936726F3E4930072A85D /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D935B26F3E4930072A85D /* Icons.swift */; };
 		C97D936826F3E4930072A85D /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D935C26F3E4930072A85D /* Ring.swift */; };
 		C97D936926F3E4930072A85D /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D935D26F3E4930072A85D /* Habits.swift */; };
+		C9E27335277E21540064FC97 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E27334277E21540064FC97 /* ColorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C97D935B26F3E4930072A85D /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		C97D935C26F3E4930072A85D /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		C97D935D26F3E4930072A85D /* Habits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
+		C9E27334277E21540064FC97 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				C97D935D26F3E4930072A85D /* Habits.swift */,
 				C97D935B26F3E4930072A85D /* Icons.swift */,
 				C97D935C26F3E4930072A85D /* Ring.swift */,
+				C9E27334277E21540064FC97 /* ColorManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				C97D936226F3E4930072A85D /* HabitDetailView.swift in Sources */,
 				C97D936126F3E4930072A85D /* TrendView.swift in Sources */,
 				C97D932B26F3E2EB0072A85D /* Persistence.swift in Sources */,
+				C9E27335277E21540064FC97 /* ColorManager.swift in Sources */,
 				C97D936426F3E4930072A85D /* HomeView.swift in Sources */,
 				C97D936826F3E4930072A85D /* Ring.swift in Sources */,
 				C97D935F26F3E4930072A85D /* IconSelectView.swift in Sources */,

@@ -28,7 +28,7 @@ struct TrendView: View {
                                 Spacer()
                                 
                                 // TODO: Year indicator
-                                let rectValues = colorAndHeight(score: Int(score.score))
+                                let rectValues = colorAndHeight(score: score.score)
                                 
                                 Rectangle()
                                     .fill(rectValues.color)
@@ -61,9 +61,8 @@ struct TrendView: View {
     }
 }
 
-func colorAndHeight(score: Int) -> (color: Color, height: CGFloat) {
-    let double = Double(score)
-    let color = Color(.sRGB, red: (double/100)*1.5, green: 0.5*(100-double)/100, blue: (100-double)/100, opacity: 1)
+func colorAndHeight(score: Double) -> (color: Color, height: CGFloat) {
+    let color = ColorManager().scoreColor(score)
     let height = CGFloat(score)
 
     return (color, height)

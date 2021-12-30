@@ -14,6 +14,7 @@ struct AddTodayView: View {
     @State private var value: Double = 75
     @EnvironmentObject var habits: Habits
     @Binding var habit: Habit?
+    let colorManager = ColorManager()
     
     
     var body: some View {
@@ -36,14 +37,14 @@ struct AddTodayView: View {
                         return Text("You're on fire!")
                     }
                 }
-                .foregroundColor(Color(.sRGB, red: (value/100)*1.5, green: 0.5*(100-value)/100, blue: (100-value)/100, opacity: 1))
+                .foregroundColor(colorManager.scoreColor(value))
             }
             
             Spacer()
             
             Slider(value: $value, in: 1...100, step: 1)
                 .rotationEffect(.degrees(-90), anchor: .center)
-                .accentColor(Color(.sRGB, red: (value/100)*1.5, green: 0.25*(100-value)/100, blue: (100-value)/100, opacity: 1))
+                .accentColor(colorManager.scoreColor(value))
             
             Spacer()
             

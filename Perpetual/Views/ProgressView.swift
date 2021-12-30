@@ -18,6 +18,7 @@ struct ProgressView: View {
     @State var filledCircleColor = Color.clear
     @State var emptyCircleColor = Color.clear
     var habitID = UUID()
+    let colorManager = ColorManager()
 
     var body: some View {
         VStack {
@@ -41,26 +42,26 @@ struct ProgressView: View {
                                     }
                                 }
                         case 16...85:
-                            Ring(progress: score, thickness: 1.5)
-                                .foregroundColor(Color.blue)
-                                .animation(.easeIn(duration: 2.5))
+                            Ring(progress: 1.0, thickness: 1.0)
+                                .foregroundColor(colorManager.scoreColor(score))
+                                //.animation(.easeInOut(duration: 1.0))
                         default:
                             Circle()
-                                .foregroundColor(filledCircleColor)
-                                .onAppear {
-                                    withAnimation(.easeInOut(duration: 1.0)) {
-                                        self.filledCircleColor = Color.red
-                                    }
-                                }
+                                .foregroundColor(colorManager.scoreColor(score))
+//                                .onAppear {
+//                                    withAnimation(.easeInOut(duration: 1.0)) {
+//                                        self.filledCircleColor = Color(.sRGB, red: (score/100)*1.5, green: 0.25*(100-score)/100, blue: (100-score)/100, opacity: 1)
+//                                    }
+//                                }
                         }
                     }
                     .frame(width: 20, height: 20)
                     .padding(.all, -3)
-                    //.onTapGesture {
-                        //filledCircleColor = Color.clear
-                        //emptyCircleColor = Color.clear
+                    .onTapGesture {
+                        filledCircleColor = Color.clear
+                        emptyCircleColor = Color.clear
                         //refresh.toggle()
-                    //}
+                    }
                 }
             }
         }
