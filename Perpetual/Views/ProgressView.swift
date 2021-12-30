@@ -27,6 +27,7 @@ struct ProgressView: View {
             ForEach(scoresGrid.indices, id: \.self) { row in
                 HStack {
                     let row = scoresGrid[row]
+                    
                     ForEach(row.indices, id: \.self) { score in
                         let score = row[score].score
                         
