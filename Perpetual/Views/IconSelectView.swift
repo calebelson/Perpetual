@@ -8,71 +8,39 @@
 import SwiftUI
 
 struct IconSelectView: View {
-    //@State var iconManager = IconManager()
     @State private var iconManager: [AppIconStatus] = createAppIconStatuses()
     
     var body: some View {
         Form {
-            ForEach(iconManager) { icon in
+            ForEach($iconManager) { $icon in
                 Button(action: {
                     let iconName = icon.appIcon.rawValue == "AppIcon" ? nil : icon.appIcon.rawValue
                     
                     UIApplication.shared.setAlternateIconName(iconName)
                     
-//                    let altIcon = icon.rawValue ? nil : icon.appIcon.rawValue
-//                    AppIcon.changeIcon(to: icon)
+                    // Update every .isCurrentAppIcon after change so checkmark is on correct line
+                    for i in iconManager.indices {
+                                            iconManager[i].isCurrentAppIcon = iconManager[i].appIcon == icon.appIcon
+                                        }
+                    
                 }) {
                     HStack {
                         Image(uiImage: icon.appIcon.thumbnail)
-                            .resizable()
-                            .frame(width: 68, height: 68)
-                            .padding(.trailing, 5)
-                       // VStack(alignment: .leading) {
+                            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                        
                         Text(icon.appIcon.presentedName)
-                                .font(.system(.callout, design: .rounded).weight(.medium))
-                                .foregroundColor(.primary)
-//                            Text(status.appIcon.subtitle)
-//                                .font(.system(.caption2, design: .rounded))
-//                                .foregroundColor(.secondary)
-                       // }
+                            .font(.system(.callout, design: .rounded).weight(.medium))
+                            .foregroundColor(.primary)
+                        
                         Spacer()
                         
-                        //let _ = print(IconManager().currentAppIcon, "current app icon")
-//                        if icon.isCurrentAppIcon {
-//                            Image(systemName: "checkmark")
-//                                .font(.headline)
-//                        }
-                        
-                        /*
-                        HStack {
-                            Image(uiImage: icon.thumbnail)
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color.gray, lineWidth: 0.25)
-                                )
-                            Text(icon.presentedName)
-                                .foregroundColor(Color.primary)
-                            Spacer()
-                            let _ = print(UIApplication.shared.alternateIconName, "alt icon name", icon.rawValue, "raw value")
-                            if UIApplication.shared.alternateIconName == icon.rawValue || (icon.rawValue == "AppIcon" && UIApplication.shared.alternateIconName == nil) {
-                                Image(systemName: "checkmark")
-                                    .font(.headline)
-                            }
-    //                        if iconManager.getIcon() == icon {
-    //                            let _ = print(iconManager.getIcon(), icon, "founder")
-    //                            Image(systemName: "checkmark")
-    //                                .font(.headline)
-    //                        } else {
-    //                            let _ = print(iconManager.getIcon())
-    //                            let _ = print(icon)
-    //                            let _ = print("unfounder")
-    //                        }
-                         */
+                        // Show checkmark only for the currently chosen icon
+                        Image(systemName: icon.isCurrentAppIcon ? "checkmark" : "")
                     }
                 }
             }
         }
+        .navigationTitle("Choose an icon")
     }
     
     private static func createAppIconStatuses() -> [AppIconStatus] {
@@ -84,7 +52,7 @@ struct IconSelectView: View {
 
 struct AppIconStatus: Hashable {
     let appIcon: AppIcon
-    let isCurrentAppIcon: Bool
+    var isCurrentAppIcon: Bool
 }
 
 extension AppIconStatus: Identifiable {
@@ -96,13 +64,6 @@ extension AppIconStatus: Identifiable {
 extension String: Identifiable {
     public var id: Self { self }
 }
-
-//class AppIconViewController: UIHostingController<IconSelectView> {
-//    convenience init() {
-//        self.init(rootView: AppIconView())
-//        title = "App Icon"
-//    }
-//}
 
 struct IconSelectView_Previews: PreviewProvider {
     static var previews: some View {

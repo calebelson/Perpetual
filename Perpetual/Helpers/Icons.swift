@@ -85,6 +85,18 @@ import UIKit
             return .blackBackground
         case "BlackOnWhiteIcon":
             return .blackOnWhite
+        case "DefaultOnDarkBlueIcon":
+            return .darkBlueBackground
+        case "DefaultOnDarkPurpleIcon":
+            return .darkPupleBackground
+        case "DefaultOnGreenIcon":
+            return .greenBackground
+        case "DefaultOnPinkArrowsIcon":
+            return .pinkArrowsBackground
+        case "DefaultOnTealIcon":
+            return .tealBackground
+        case "DiscoIcon":
+            return .discoBackground
         default:
             return .defaultIcon
         }

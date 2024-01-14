@@ -60,15 +60,16 @@ struct SettingsView: View {
                     } label: {
                         HStack {
                             Image(uiImage: UIImage(named: currentIcon) ?? UIImage())
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                                .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color.gray, lineWidth: 0.25)
-                                )
+                                //.clipShape(RoundedRectangle(cornerRadius: 12))
+                                .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+//                                .overlay(
+//                                RoundedRectangle(cornerRadius: 12)
+//                                    .stroke(Color.gray, lineWidth: 0.25)
+//                                )
                             Text("Change icon")
                         }
                         .onAppear {
-                            //currentIcon = iconManager.getIcon().rawValue
+                            currentIcon = getIcon().rawValue
                         }
                     }
                 }
