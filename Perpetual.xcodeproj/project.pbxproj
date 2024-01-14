@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93A05B82B54699D0013A282 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C93A05B72B54699D0013A282 /* README.md */; };
 		C97D932226F3E2E90072A85D /* PerpetualApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D932126F3E2E90072A85D /* PerpetualApp.swift */; };
 		C97D932626F3E2EB0072A85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97D932526F3E2EB0072A85D /* Assets.xcassets */; };
 		C97D932926F3E2EB0072A85D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97D932826F3E2EB0072A85D /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C93A05B72B54699D0013A282 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C97D931E26F3E2E90072A85D /* Perpetual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perpetual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97D932126F3E2E90072A85D /* PerpetualApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualApp.swift; sourceTree = "<group>"; };
 		C97D932526F3E2EB0072A85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		C97D931526F3E2E90072A85D = {
 			isa = PBXGroup;
 			children = (
+				C93A05B72B54699D0013A282 /* README.md */,
 				C97D932026F3E2E90072A85D /* Perpetual */,
 				C97D933626F3E2EB0072A85D /* PerpetualTests */,
 				C97D934026F3E2EB0072A85D /* PerpetualUITests */,
@@ -289,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A05B82B54699D0013A282 /* README.md in Resources */,
 				C97D932926F3E2EB0072A85D /* Preview Assets.xcassets in Resources */,
 				C97D932626F3E2EB0072A85D /* Assets.xcassets in Resources */,
 			);
@@ -493,7 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perpetual/Preview Content\"";
 				DEVELOPMENT_TEAM = 877B3XVSF5;
 				ENABLE_PREVIEWS = YES;
@@ -508,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = calebElson.PerpetualHabits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -525,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perpetual/Preview Content\"";
 				DEVELOPMENT_TEAM = 877B3XVSF5;
 				ENABLE_PREVIEWS = YES;
@@ -540,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = calebElson.PerpetualHabits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
